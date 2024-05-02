@@ -68,3 +68,16 @@ print(find_first_dupe_set([2, 1, 3, 3, 2]))
 print(find_first_dupe_set([1, 2, 3, 4]))  
 
 
+def find_first_duplicate(arr):
+    
+    unique_nums = set()
+
+    for num in arr:
+        if num in unique_nums:
+            return num
+        unique_nums.add(num)
+
+    return -1
+
+print("Expecting: 3")
+print(find_first_duplicate([2, 1, 3, 3, 2]))
