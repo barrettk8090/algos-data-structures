@@ -4,6 +4,8 @@
 # Ex. input = "hello"
 # Ex. output = "olleh"
 
+# Initial Solution – O(n^2)
+# NOTE: Due to the complexity of concatenation, this isn't very efficient 
 def reverse_string(string):
     reversedstringarr = []
     for char in string:
@@ -11,7 +13,14 @@ def reverse_string(string):
     reversedstring = ""
     for i in reversedstringarr:
         reversedstring = reversedstring + i
-    print(reversedstringarr)
     print(reversedstring)
 
 reverse_string("hello")
+
+# Better solution - use slicing - O(n)
+
+def reverse_string_gooder(string):
+    reversed_string = string[::-1]  # Use slicing to reverse the string directly
+    print(reversed_string)
+
+reverse_string_gooder("hello")
