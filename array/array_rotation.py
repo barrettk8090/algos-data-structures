@@ -4,6 +4,8 @@
 # Rotate to the following: [2,3,4,5,6,7,1]  /// Left rotation by 1 
 
 
+# SOLUTION 1 - O(log10)
+
 # First function to reverse the given array by swapping the 
 # first and last numbers 
 def reverse(start, end, arr):
@@ -49,3 +51,26 @@ if (d <= size):
 else:
     d = d % size
     print("Rotated array: ", left_rotate_array(arr, size, d))
+
+############################################################
+
+# SOLUTION 2 - Rotate using a temp array - O(n)
+
+# rotate the array by "d" elements
+def rotateArray(arr, n, d):
+    temp = []
+    i = 0
+    while (i < d):
+        temp.append(arr[i])
+        i = i + 1
+    i = 0 
+    while (d < n):
+        arr[i] = arr[d]
+        i = i + 1
+        d = d + 1
+    arr[:] = arr[: i] + temp
+    return arr 
+
+arr = [1,2,3,4,5,6,7]
+print("Array after left rotation is: ", end=' ')
+print(rotateArray(arr, len(arr), 2))
