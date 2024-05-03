@@ -10,24 +10,31 @@
 # Output: 55
 # Note that we are using zero-indexing for the series.
 
+#0th element = 0 
+#First element = 0 
+#Second element = 1 
+#Third element = 1 
+#Fourth element = 2
+#Fifth element = 3
+#Sixth element = 4
+
 def fibonacci(nth_element):
-    first_num = 0
-    second_num = 1
-    if nth_element == 0:
-        return first_num
-    elif nth_element == 1:
-        return second_num
+    if nth_element == 0 or nth_element == 1:
+        print(0)
+        return 0
+    elif nth_element == 2:
+        print(1)
+        return 1
     elif nth_element > 1:
         list = [0, 1]
-        for i, j in list:
-            i + j 
+        i = 0 
+        j = 1 
+        while nth_element >= len(list):
+            new_value = list[i] + list[j]
+            list.append(new_value)
+            i += 1
+            j += 1
+        print(list[nth_element])
+        
 
-
-    pass
-
-# 0 + 1 = 1
-# 1 + 1 = 2
-# 2 + 1 = 3
-# 3 + 2 = 5
-# 5 + 3 = 8
-# (previous number + even_more previous number)
+fibonacci(10)
