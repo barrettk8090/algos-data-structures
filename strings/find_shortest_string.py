@@ -13,3 +13,5 @@
 
 def find_shortest_string(arr):
     pass
+    # for i in arr:
+    #     if len(arr[i]) 
