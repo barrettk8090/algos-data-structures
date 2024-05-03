@@ -19,6 +19,8 @@ import random
 
 # average runtime = (current time - start time) / 2000
 
+### ❗IMPORTANT: The selection sort ALWAYS/INHERENTLY has a O(n^2) time complexity
+
 ## Solution 1A - O(n^2) 
 def selection_sort(arr):
     new_arr = []
@@ -48,3 +50,29 @@ print(f"Average runtime: {average_runtime} seconds")
 selection_sort([3, -1, 5, 2])
 
 ######################################################
+
+# Solution 2 - with built in min 
+def selectionSort(arr):
+    for i in range(len(arr)):
+        min_index = i
+        for j in range(i+1, len(arr)):
+            if arr[j] < arr[min_index]:
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+
+print(selectionSort([3, -1, 5, 2]))  # Output: [-1, 2, 3, 5]
+
+# Solution 3 - without built in 
+def selectionSortWithoutBuiltIn(arr):
+    for i in range(len(arr)):
+        min_val = arr[i]
+        min_index = i
+        for j in range(i+1, len(arr)):
+            if arr[j] < min_val:
+                min_val = arr[j]
+                min_index = j
+        arr[i], arr[min_index] = arr[min_index], arr[i]
+    return arr
+
+print(selectionSortWithoutBuiltIn([3, -1, 5, 2]))  # Output: [-1, 2, 3, 5]
