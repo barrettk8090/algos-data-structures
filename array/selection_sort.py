@@ -1,3 +1,6 @@
+import time
+import random
+
 # Sort an Array of numbers using selection sort. The selection sort algorithm sorts an array by repeatedly finding the minimum element (lowest value) in the input Array, and then putting it at the correct location in the sorted Array.
 
 # Input: [3, -1, 5, 2]
@@ -16,8 +19,32 @@
 
 # average runtime = (current time - start time) / 2000
 
+## Solution 1A - O(n^2) 
 def selection_sort(arr):
-    arr.sort()
-    print(arr)
+    new_arr = []
+    while len(arr) > 0:
+        new_arr.append(min(arr))
+        arr.pop(arr.index(min(arr)))
+    print(new_arr)
+
+## SOLUTION 1B - Calculating time. 
+# Benchmarking
+start_time = time.time()
+
+# Run the function 1000 times with small input
+for _ in range(1000):
+    selection_sort([random.randint(-100, 100) for _ in range(3)])
+
+# Run the function 1000 times with large input
+for _ in range(1000):
+    selection_sort([random.randint(-100, 100) for _ in range(100)])
+
+end_time = time.time()
+
+# Calculate average runtime
+average_runtime = (end_time - start_time) / 2000
+print(f"Average runtime: {average_runtime} seconds")
 
 selection_sort([3, -1, 5, 2])
+
+######################################################
