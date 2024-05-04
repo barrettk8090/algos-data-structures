@@ -6,9 +6,18 @@
     #   print(count)
     #   count += 1
 
+#Solution 1 - O(n)
 def recursive_count(n):
     print(n)
     if n <= 8:
         recursive_count(n+1)
 
 recursive_count(0)
+
+# Solution 2 - O(n) 
+def recursive_count_2(count=0):
+    if count < 10:
+        print(count)
+        recursive_count(count + 1)
+
+recursive_count_2()
