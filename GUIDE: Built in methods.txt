@@ -5,7 +5,10 @@ https://docs.python.org/3/library/functions.html
 abs()
 Return the absolute value of a number.
 
-sort()
+.sort() - modifies the original list in-place, does not return a *new* list
+
+.sort(key=len)
+Ex. sort by string length instead of strings in alphabetical order
 
 enumerate()
 
