@@ -1,0 +1,20 @@
+Write explanation for each below, and if necessary, include the time complexity (e.g. sort)
+https://docs.python.org/3/library/functions.html 
+
+
+abs()
+Return the absolute value of a number.
+
+sort()
+
+enumerate()
+
+insert(index, item)
+
+len()
+
+range()
+
+sum()
+
+reversed()
