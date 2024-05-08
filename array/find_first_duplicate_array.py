@@ -4,14 +4,8 @@
 # Output: 3
 
 # Input: [1, 2, 3, 4]
-# Output: -1
+# Output: -1 
 
-#### ❗ NOTE: The wording on this one is weird, from Flatiron. In the expected output above, 
-#### They're saying that 3 is the expected output. However, 2 is technically the first
-#### duplicate, despite it's duplicate showing up later than 3. 
-
-
-#### Solution 1 mimics the flatiron solution. 2 & 3 correctly check for real dupes.
 
 #Solution 1 - O(n^2), worst case scenario 
 
