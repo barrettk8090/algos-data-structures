@@ -17,6 +17,11 @@ insert(index, item)
 len()
 
 range()
+- range(start, stop, step) // all optional
+- stop position is not inclusive (e.g. range(0, 2) will get the first[0] and second[1])
+- use step to change the increment, default is 1. 
+-- range(3, 20, 2) --> step by 2 instead of 1, result is: 3, 5, 7, 9, 11, 13, 15, 17, 19
+
 
 sum()
 
