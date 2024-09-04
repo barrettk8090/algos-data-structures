@@ -17,3 +17,5 @@ new_arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print("First element of first row:", new_arr[0][0])
 print("Third element of second row:", new_arr[1][2])
 print("Second element of third row:", new_arr[2][1])
+
+
